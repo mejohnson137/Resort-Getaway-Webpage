@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<title>Pacific Trails Resort - Reservations</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="pacific.css">
+<script>
+function validateForm(){
+if (document.forms[0].myEmail.value == "" ) {
+alert("please enter an email address.");
+return false;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<header><h1>Reservations</h1></header>
+<nav>
+<ul>
+<li><a href="Index.html">Home</a></li>
+<li><a href="Yurts.html">Yurts</a></li>
+<li><a href="Activities.html"> Activities</a></li>
+<li><a href="Reservations.html"> Reservations</a></li>
+</ul>
+</nav>
+<main>
+<h2>Reservations at Pacific Trails</h2>
+<h3>Contact Us</h3>
+<p>Required fields are maked with an asterisk (*)</p>
+<form method="post" onsubmit="return validateForm();" action="https://webdevbasics.net/scripts/pacific.php">
+<label for="myFName">First Name:</label>
+<input type="text" name="myFName" id="myFName">
+<label for="myLName">Last Name:</label>
+<input type="text" name="myLName" id="myLName">
+<label for="myEmail">* E-mail:</label>
+<input type="email" name="myEmail" id="myEmail">
+<label for="myPhone">Phone:</label>
+<input type="tel" name="myPhone" id="myPhone">
+<label for="myArrival">Arrival Date:</label>
+<input type="date" name="myArrival" id="myArrival">
+<label for="myNights">Nights:</label>
+<input type="number" min="1" max="14" name="myNights" id="myNights">
+<label for="myComments">Comments:</label>
+<textarea name="myComments" id="myComments" rows="2" cols="20"></textarea>
+<input id="mySubmit" type="submit" value="Submit">
+</form>
+</main>
+<footer>
+Coppyright &copy; 2018 <span class="resort">Pacific Trails Resort</span> <br>
+<a href="mailto:yourfirstname@yourlastname.com">yourfirstname@yourlastname.com</a>
+</footer>
+</div>
+</body>
+</html>
